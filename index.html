@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="rtl" xmlns="http://www.w3.org/1999/xhtml" lang="ar">
+
+<!-- #BeginTemplate "master.dwt" -->
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<!-- #BeginEditable "doctitle" -->
+<title>الرئيسية والدرس التفاعلي | منصة إشارة وتعلّم</title>
+<!-- #EndEditable -->
+<link href="styles/style0.css" media="screen" rel="stylesheet" title="CSS" type="text/css" />
+<script type="text/javascript">
+/* Interactive Lesson Scripts - Compatible with Expression Web & Modern Browsers */
+function checkAnswer(isCorrect, optId) {
+	var feedback = document.getElementById('lesson_feedback');
+	var scoreBox = document.getElementById('student_points_val');
+	if (isCorrect) {
+		feedback.className = 'feedback_box feedback_success';
+		feedback.style.display = 'block';
+		feedback.innerHTML = '&#10004; إجابة بصرية صحيحة ورائعة! أحسنت يا بطل (+20 نقطة) &#127942;';
+		document.getElementById('step4_badge').style.display = 'block';
+		if(scoreBox) { scoreBox.innerText = '120 نقطة'; }
+	} else {
+		feedback.className = 'feedback_box feedback_retry';
+		feedback.style.display = 'block';
+		feedback.innerHTML = '&#9888; فكّر ثانيةً وانظر إلى إشارة اليد والصورة التوضيحية ثم حاول مجدداً.';
+	}
+}
+
+function toggleInterpreterSpeed() {
+	var spdBtn = document.getElementById('btn_speed');
+	var speedTxt = document.getElementById('speed_status');
+	if(spdBtn.innerText.indexOf('عادي') !== -1) {
+		spdBtn.innerText = 'سرعة الإشارة: بطيء (0.75x)';
+		if(speedTxt) speedTxt.innerText = 'سرعة حركة الإشارة: هادئة للتوضيح';
+	} else {
+		spdBtn.innerText = 'سرعة الإشارة: عادي (1.0x)';
+		if(speedTxt) speedTxt.innerText = 'سرعة حركة الإشارة: طبيعية';
+	}
+}
+
+function replaySignClip() {
+	var sub = document.getElementById('live_subtitles');
+	sub.style.backgroundColor = '#1E3A8A';
+	sub.innerText = 'جاري إعادة مقطع لغة الإشارة والشرح البصري...';
+	setTimeout(function() {
+		sub.style.backgroundColor = 'rgba(0, 0, 0, 0.85)';
+		sub.innerText = 'النص المتزامن: الماء سر الحياة، يتكون من الهيدروجين والأكسجين (رمز الإشارة: يد مفتوحة مع حركة التموج).';
+	}, 900);
+}
+</script>
+</head>
+
+<body>
+
+<!-- Begin Container -->
+<div id="container">
+	<!-- Begin Masthead -->
+	<div id="masthead">
+		<div id="site_badge">&star; تطبيق عملي مبني على دراسة الجدوى الأكاديمية &star;</div>
+		<h1><a href="default.html">منصة &laquo;إشارة وتعلّم&raquo; الرقمية التفاعلية</a></h1>
+		<h3>المنظومة التعليمية الذكية لدعم التعلم البصري ولغة الإشارة وتنمية المفردات للطلاب الصم وضعاف السمع</h3>
+	</div>
+	<!-- End Masthead -->
+	<!-- Begin Navigation -->
+	<div id="navigation">
+		<ul>
+			<li class="active_link"><a href="default.html">الرئيسية والدرس التفاعلي</a></li>
+			<li><a href="about_me/default.html">الدروس والمناهج المصورة</a></li>
+			<li><a href="resume/default.html">الألعاب والأنشطة التفاعلية</a></li>
+			<li><a href="photo_gallery/default.html">لوحة المتابعة والتقارير</a></li>
+			<li><a href="links/default.html">القاموس الإشاري المصور</a></li>
+			<li><a href="contact/default.html">فريق العمل والتواصل</a></li>
+		</ul>
+	</div>
+	<!-- End Navigation -->
+	<!-- Begin content_container -->
+	<div id="content_container">
+		<!-- Begin Left Column (Main Practical Content in RTL) -->
+		<div id="column_left">
+			<!-- #BeginEditable "content" -->
+			<h2>الدرس التفاعلي النموذجي: دورة الماء في الطبيعة</h2>
+
+			<div class="callout">
+				<p><strong>تطبيق مسار الدرس المعتمد في دراسة الجدوى (4 خطوات):</strong><br />
+				1. مدخل بصري &larr; 2. شرح بلغة الإشارة مع نص توضيحي &larr; 3. نشاط بؤري تفاعلي &larr; 4. تقييم فوري وشارة تشجيعية.</p>
+			</div>
+
+			<!-- STEP 1: VISUAL INTAKE -->
+			<div class="step_item">
+				<span class="step_number">1</span>
+				<strong>الخطوة الأولى: المدخل البصري (تهيئة ذهنية مشهدية)</strong>
+				<p>شاهد المشهد التوضيحي التالي الذي يُجسد تحول قطرات الماء من البحر إلى السحاب ثم سقوط المطر:</p>
+				<div style="background: #E0F2FE; border: 2px dashed #0284C7; padding: 15px; text-align: center; border-radius: 8px; margin: 10px 0;">
+					<div style="font-size: 32px; margin-bottom: 6px;">&#9728; &rarr; &#127754; &rarr; &#9729; &rarr; &#127783;</div>
+					<strong style="color: #0369A1; font-size: 15px;">الشمس تُسخّن ماء البحر &larr; يتصاعد البخار &larr; تتشكل الغيوم &larr; تسقط الأمطار</strong>
+				</div>
+			</div>
+
+			<!-- STEP 2: VIDEO & SIGN INTERPRETER FRAME -->
+			<div class="step_item">
+				<span class="step_number">2</span>
+				<strong>الخطوة الثانية: الشرح بالإشارة والترجمة المتزامنة</strong>
+				<p>نافذة العرض المرئي المتوافقة مع مبدأ (Visual-First) مع كادر مخصص لمترجم لغة الإشارة المعتمد:</p>
+
+				<!-- Simulated Interactive Video Player -->
+				<div class="video_simulator">
+					<div class="video_screen">
+						<!-- Main Visual Educational Board -->
+						<div class="video_main_content">
+							<h4>لوحة العرض التعليمية (التبخر والتكثف)</h4>
+							<p>عندما تسطع الشمس على مياه البحار والأنهار، يتحول الماء السائل إلى بخار غير مرئي يصعد إلى السماء (عملية التبخر). وعندما يبرد البخار في طبقات الجو العليا يتحول إلى غيوم كثيفة (عملية التكثف).</p>
+							<div style="margin-top: 10px;">
+								<span class="badge badge_green">مفهوم 1: التبخر (Evaporation)</span>
+								<span class="badge badge_blue">مفهوم 2: التكثف (Condensation)</span>
+							</div>
+						</div>
+
+						<!-- Sign Language Interpreter Dedicated Box -->
+						<div class="video_interpreter_box">
+							<span class="interpreter_badge">مترجم لغة الإشارة</span>
+							<div class="interpreter_avatar">
+								<div style="font-size: 28px; margin-bottom: 4px;">&#128076; &#9995;</div>
+								<span>أ. أحمد (خبير لغة الإشارة)</span>
+							</div>
+							<div id="speed_status" style="font-size: 11px; color: #E0F2FE;">إشارة الحركة: رفع اليدين لأعلى بحركة تموجية لتمثيل التبخر</div>
+						</div>
+					</div>
+
+					<!-- Synchronized Captions/Subtitles -->
+					<div id="live_subtitles" class="video_subtitles">
+						النص المتزامن: الماء سر الحياة، يتكون من الهيدروجين والأكسجين (رمز الإشارة: يد مفتوحة مع حركة التموج).
+					</div>
+
+					<!-- Video Controls -->
+					<div class="video_controls">
+						<button type="button" class="video_btn" onclick="replaySignClip();">&#9654; إعادة مقطع الإشارة</button>
+						<button type="button" id="btn_speed" class="video_btn video_btn_secondary" onclick="toggleInterpreterSpeed();">سرعة الإشارة: عادي (1.0x)</button>
+						<span style="float: left; font-size: 12px; color: #94A3B8; line-height: 28px;">الدقة: HD 1080p | كادر إشارة ثابت</span>
+					</div>
+				</div>
+			</div>
+
+			<!-- STEP 3: INTERACTIVE ACTIVITY -->
+			<div class="step_item">
+				<span class="step_number">3</span>
+				<strong>الخطوة الثالثة: النشاط التطبيقي التفاعلي (اختبر فهمك البصري)</strong>
+				<p>اختر الإشارة الصحيحة المعبرة عن مفهوم <strong>"سقوط المطر"</strong> من بين الخيارات المصورة أدناه:</p>
+
+				<div class="quiz_container">
+					<div class="quiz_question">أي الإشارات التالية تُمثل حركة أصابع اليدين إلى أسفل للدلالة على سقوط قطرات المطر؟</div>
+
+					<div class="quiz_options_grid">
+						<!-- Option A -->
+						<div class="quiz_opt_card" onclick="checkAnswer(false, 'opt1');">
+							<span class="quiz_opt_img">&#9728;</span>
+							<div class="quiz_opt_title">الخيار (أ): دائرة باليد فوق الرأس</div>
+							<div class="quiz_opt_sign">إشارة: الشمس الساطعة</div>
+						</div>
+
+						<!-- Option B (Correct) -->
+						<div class="quiz_opt_card" onclick="checkAnswer(true, 'opt2');">
+							<span class="quiz_opt_img">&#127783;</span>
+							<div class="quiz_opt_title">الخيار (ب): تحريك أطراف الأصابع لأسفل</div>
+							<div class="quiz_opt_sign">إشارة: هطول المطر (صحيح)</div>
+						</div>
+
+						<!-- Option C -->
+						<div class="quiz_opt_card" onclick="checkAnswer(false, 'opt3');">
+							<span class="quiz_opt_img">&#127754;</span>
+							<div class="quiz_opt_title">الخيار (ج): حركة أفقية متموجة لليد</div>
+							<div class="quiz_opt_sign">إشارة: أمواج البحر</div>
+						</div>
+
+						<!-- Option D -->
+						<div class="quiz_opt_card" onclick="checkAnswer(false, 'opt4');">
+							<span class="quiz_opt_img">&#9729;</span>
+							<div class="quiz_opt_title">الخيار (د): كفان متقاربان على شكل قبة</div>
+							<div class="quiz_opt_sign">إشارة: السحابة الكبيرة</div>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+
+					<!-- Real-time Feedback Alert -->
+					<div id="lesson_feedback" class="feedback_box"></div>
+				</div>
+			</div>
+
+			<!-- STEP 4: ASSESSMENT & REWARD -->
+			<div class="step_item">
+				<span class="step_number">4</span>
+				<strong>الخطوة الرابعة: التقييم الفوري وشارات الإنجاز</strong>
+				<p>عند إتمام النشاط بنجاح، يحصل الطالب على وسام الإتقان ونقاط الخبرة المسجلة في تقريره الأكاديمي:</p>
+
+				<div id="step4_badge" style="display: none; background: #FEF3C7; border: 2px solid #F59E0B; padding: 15px; border-radius: 8px; text-align: center; margin: 12px 0;">
+					<div style="font-size: 32px;">&#127941;</div>
+					<h4 style="color: #92400E; margin: 4px 0;">تهانينا! لقد حصلت على وسام "مستكشف الطبيعة الذكي"</h4>
+					<p style="color: #B45309; margin: 0; font-size: 13px;">تم تسجيل النتيجة تلقائياً في لوحة تقدم الطالب وتم إشعار المعلم وولي الأمر.</p>
+				</div>
+
+				<div style="text-align: center; margin-top: 15px;">
+					<a href="about_me/default.html" class="btn_submit" style="display: inline-block; text-decoration: none;">الانتقال إلى فهرس الدروس والمناهج &larr;</a>
+					<a href="resume/default.html" class="btn_submit" style="display: inline-block; text-decoration: none; background-color: #0284C7; margin-right: 8px;">دخول صالة الألعاب التعليمية &larr;</a>
+				</div>
+			</div>
+			<!-- #EndEditable --></div>
+		<!-- End Left Column -->
+		<!-- Begin Right Column (Sidebar in RTL) -->
+		<div id="column_right">
+			<!-- #BeginEditable "sidebar" -->
+			<!-- Student Live Profile Widget -->
+			<div class="student_badge_card">
+				<div class="student_avatar">&#128102;</div>
+				<div class="student_info">
+					<div class="student_name">عمر أحمد سعيد</div>
+					<div class="student_level">الصف الرابع الابتدائي - دمج</div>
+				</div>
+				<div class="clearfix"></div>
+
+				<div style="margin-top: 10px;">
+					<span style="font-size: 11px; font-weight: bold; color: #1E3A8A;">نسبة إكمال المنهج:</span>
+					<div class="progress_bar_wrapper">
+						<div class="progress_bar_fill" style="width: 75%;">75%</div>
+					</div>
+					<div style="font-size: 11px; color: #475569; overflow: hidden;">
+						<span style="float: right;">مجموع النقاط: <strong id="student_points_val" style="color: #0D9488;">100 نقطة</strong></span>
+						<span style="float: left;">الأوسمة: &#127942; 4</span>
+					</div>
+				</div>
+			</div>
+
+			<!-- Quick Practical Menu -->
+			<div class="side_box">
+				<h5>أقسام المنصة التعليمية</h5>
+				<ul>
+					<li><a href="about_me/default.html">&#128218; المناهج والدروس المرئية</a></li>
+					<li><a href="resume/default.html">&#127918; الألعاب والأنشطة التفاعلية</a></li>
+					<li><a href="photo_gallery/default.html">&#128202; لوحة المتابعة وتقارير المعلم</a></li>
+					<li><a href="links/default.html">&#9995; القاموس الإشاري المصور</a></li>
+					<li><a href="contact/default.html">&#128101; فريق العمل والتواصل الأكاديمي</a></li>
+				</ul>
+			</div>
+
+			<!-- Visual Accessibility Notice -->
+			<div class="side_box" style="border-right: 3px solid #0D9488;">
+				<h5>خصائص سهولة الوصول البصرية</h5>
+				<p class="text_muted">&bull; خطوط عريضة ومتباعدة.<br />
+				&bull; إشارات بصرية ملونة عند النجاح أو الخطأ.<br />
+				&bull; تحكم في سرعة حركة الإشارة للمترجم.<br />
+				&bull; نصوص مصاحبة لكل مفهوم.</p>
+			</div>
+			<!-- #EndEditable --></div>
+		<!-- End Right Column -->
+		<!-- Begin Footer -->
+		<div id="footer">
+			<div id="copyright">
+				<p>منصة &laquo;إشارة وتعلّم&raquo; &copy; 2026 - التطبيق العملي لدراسة جدوى برنامج تعليم ذوي الإعاقة السمعية</p>
+				<p class="text_muted" style="color: #94A3B8; margin-top: 4px;">إعداد وتطوير فريق العمل الأكاديمي المكون من 13 باحثاً وباحثة | بيئة تعليمية داعمة لمعايير التعليم الدامج (Visual-First)</p>
+			</div>
+			<p><a href="default.html">الرئيسية والدرس التفاعلي</a> | <a href="about_me/default.html">الدروس والمناهج</a> | <a href="resume/default.html">الألعاب والأنشطة</a> |
+			<a href="photo_gallery/default.html">لوحة المتابعة والتقارير</a> | <a href="links/default.html">القاموس الإشاري المصور</a> |
+			<a href="contact/default.html">فريق العمل والتواصل</a></p>
+		</div>
+		<!-- End Footer --></div>
+	<!-- End content_container --></div>
+<!-- End Container -->
+
+</body>
+<!-- #EndTemplate -->
+
+</html>

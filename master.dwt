@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="rtl" xmlns="http://www.w3.org/1999/xhtml" lang="ar">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<!-- #BeginEditable "doctitle" -->
+<title>منصة إشارة وتعلّم | المنصة التعليمية الرقمية لذوي الإعاقة السمعية</title>
+<!-- #EndEditable -->
+<link href="styles/style0.css" media="screen" rel="stylesheet" title="CSS" type="text/css" />
+</head>
+
+<body>
+
+<!-- Begin Container -->
+<div id="container">
+	<!-- Begin Masthead -->
+	<div id="masthead">
+		<div id="site_badge">&star; تطبيق عملي مبني على دراسة الجدوى الأكاديمية &star;</div>
+		<h1><a href="default.html">منصة &laquo;إشارة وتعلّم&raquo; الرقمية التفاعلية</a></h1>
+		<h3>المنظومة التعليمية الذكية لدعم التعلم البصري ولغة الإشارة وتنمية المفردات للطلاب الصم وضعاف السمع</h3>
+	</div>
+	<!-- End Masthead -->
+	<!-- Begin Navigation -->
+	<div id="navigation">
+		<ul>
+			<li><a href="default.html">الرئيسية والدرس التفاعلي</a></li>
+			<li><a href="about_me/default.html">الدروس والمناهج المصورة</a></li>
+			<li><a href="resume/default.html">الألعاب والأنشطة التفاعلية</a></li>
+			<li><a href="photo_gallery/default.html">لوحة المتابعة والتقارير</a></li>
+			<li><a href="links/default.html">القاموس الإشاري المصور</a></li>
+			<li><a href="contact/default.html">فريق العمل والتواصل</a></li>
+		</ul>
+	</div>
+	<!-- End Navigation -->
+	<!-- Begin content_container -->
+	<div id="content_container">
+		<!-- Begin Left Column (Main Practical Content in RTL) -->
+		<div id="column_left">
+			<!-- #BeginEditable "content" -->
+			<h2>عنوان المحتوى العملي</h2>
+			<p>هنا يتم عرض المحتوى التفاعلي للدرس أو النشاط العملي.</p>
+			<!-- #EndEditable --></div>
+		<!-- End Left Column -->
+		<!-- Begin Right Column (Sidebar in RTL) -->
+		<div id="column_right">
+			<!-- #BeginEditable "sidebar" -->
+			<h4>لوحة التحكم السريعة</h4>
+			<p>أدوات التصفح ومتابعة الطالب.</p>
+			<!-- #EndEditable --></div>
+		<!-- End Right Column -->
+		<!-- Begin Footer -->
+		<div id="footer">
+			<div id="copyright">
+				<p>منصة &laquo;إشارة وتعلّم&raquo; &copy; 2026 - التطبيق العملي لدراسة جدوى برنامج تعليم ذوي الإعاقة السمعية</p>
+				<p class="text_muted" style="color: #94A3B8; margin-top: 4px;">إعداد وتطوير فريق العمل الأكاديمي المكون من 13 باحثاً وباحثة | بيئة تعليمية داعمة لمعايير التعليم الدامج (Visual-First)</p>
+			</div>
+			<p><a href="default.html">الرئيسية والدرس التفاعلي</a> | <a href="about_me/default.html">الدروس والمناهج</a> | <a href="resume/default.html">الألعاب والأنشطة</a> |
+			<a href="photo_gallery/default.html">لوحة المتابعة والتقارير</a> | <a href="links/default.html">القاموس الإشاري المصور</a> |
+			<a href="contact/default.html">فريق العمل والتواصل</a></p>
+		</div>
+		<!-- End Footer --></div>
+	<!-- End content_container --></div>
+<!-- End Container -->
+
+</body>
+
+</html>

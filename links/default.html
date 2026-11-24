@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="rtl" xmlns="http://www.w3.org/1999/xhtml" lang="ar">
+
+<!-- #BeginTemplate "../master.dwt" -->
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<!-- #BeginEditable "doctitle" -->
+<title>القاموس الإشاري المصور | منصة إشارة وتعلّم</title>
+<!-- #EndEditable -->
+<link href="../styles/style0.css" media="screen" rel="stylesheet" title="CSS" type="text/css" />
+<script type="text/javascript">
+/* Interactive Sign Language Dictionary Scripts */
+function showSignDetail(word, signIcon, handDesc, example) {
+	var box = document.getElementById('sign_detail_box');
+	box.style.display = 'block';
+	document.getElementById('dict_word').innerText = word;
+	document.getElementById('dict_icon').innerText = signIcon;
+	document.getElementById('dict_hand').innerText = handDesc;
+	document.getElementById('dict_example').innerText = example;
+	box.scrollIntoView({ behavior: 'smooth' });
+}
+
+function filterDict(category) {
+	var cards = document.getElementsByClassName('sign_card');
+	for(var i=0; i<cards.length; i++) {
+		if(category === 'all' || cards[i].getAttribute('data-cat') === category) {
+			cards[i].style.display = 'block';
+		} else {
+			cards[i].style.display = 'none';
+		}
+	}
+}
+</script>
+</head>
+
+<body>
+
+<!-- Begin Container -->
+<div id="container">
+	<!-- Begin Masthead -->
+	<div id="masthead">
+		<div id="site_badge">&star; تطبيق عملي مبني على دراسة الجدوى الأكاديمية &star;</div>
+		<h1><a href="../default.html">منصة &laquo;إشارة وتعلّم&raquo; الرقمية التفاعلية</a></h1>
+		<h3>المنظومة التعليمية الذكية لدعم التعلم البصري ولغة الإشارة وتنمية المفردات للطلاب الصم وضعاف السمع</h3>
+	</div>
+	<!-- End Masthead -->
+	<!-- Begin Navigation -->
+	<div id="navigation">
+		<ul>
+			<li><a href="../default.html">الرئيسية والدرس التفاعلي</a></li>
+			<li><a href="../about_me/default.html">الدروس والمناهج المصورة</a></li>
+			<li><a href="../resume/default.html">الألعاب والأنشطة التفاعلية</a></li>
+			<li><a href="../photo_gallery/default.html">لوحة المتابعة والتقارير</a></li>
+			<li class="active_link"><a href="default.html">القاموس الإشاري المصور</a></li>
+			<li><a href="../contact/default.html">فريق العمل والتواصل</a></li>
+		</ul>
+	</div>
+	<!-- End Navigation -->
+	<!-- Begin content_container -->
+	<div id="content_container">
+		<!-- Begin Left Column (Main Practical Content in RTL) -->
+		<div id="column_left">
+			<!-- #BeginEditable "content" -->
+			<h2>القاموس الإشاري البصري التفاعلي</h2>
+
+			<div class="callout">
+				<p><strong>المعجم الإشاري الموحد:</strong> مرجع بصري تفاعلي يُمكّن الطالب، المعلم، وولي الأمر من البحث عن مفردات المنهج والحياة اليومية، والتعرف على حركة اليدين والشفاه وتعبيرات الوجه المصاحبة لكل كلمة وفق القاموس الإشاري العربي المعتمد.</p>
+			</div>
+
+			<!-- Dynamic Detailed Sign Viewer Modal -->
+			<div id="sign_detail_box" style="display: none; background: #F0FDFA; border: 2px solid #0D9488; border-radius: 8px; padding: 18px; margin-bottom: 22px;">
+				<div style="float: left; cursor: pointer; font-weight: bold; color: #991B1B;" onclick="document.getElementById('sign_detail_box').style.display='none';">&#10006; إغلاق التفاصيل</div>
+				<h3 style="margin-top: 0; color: #0F766E;">بطاقة شرح الإشارة: <span id="dict_word" style="color: #1E3A8A;"></span></h3>
+
+				<div style="overflow: hidden; margin: 12px 0;">
+					<div id="dict_icon" style="float: right; width: 80px; height: 80px; background: #FFF; border: 2px solid #0D9488; border-radius: 8px; font-size: 40px; text-align: center; line-height: 80px; margin-left: 15px;"></div>
+					<div style="float: right; width: 480px;">
+						<div style="font-size: 14px; margin-bottom: 8px;"><strong>طريقة أداء حركة اليدين:</strong> <span id="dict_hand" style="color: #334155;"></span></div>
+						<div style="font-size: 13px; color: #047857;"><strong>مثال في سياق جملة مفيدة:</strong> <span id="dict_example" style="font-style: italic;"></span></div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+			<!-- Category Filter Buttons -->
+			<div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 6px; padding: 10px; margin-bottom: 18px; text-align: center;">
+				<strong style="margin-left: 6px;">تصنيف المفردات:</strong>
+				<button type="button" class="video_btn" style="padding: 4px 10px; font-size: 11px;" onclick="filterDict('all');">الكل</button>
+				<button type="button" class="video_btn video_btn_secondary" style="padding: 4px 10px; font-size: 11px;" onclick="filterDict('school');">المدرسة والتعليم</button>
+				<button type="button" class="video_btn video_btn_secondary" style="padding: 4px 10px; font-size: 11px;" onclick="filterDict('family');">الأسرة والبيت</button>
+				<button type="button" class="video_btn video_btn_secondary" style="padding: 4px 10px; font-size: 11px;" onclick="filterDict('feelings');">المشاعر والتحيات</button>
+			</div>
+
+			<!-- FLASHCARDS GRID -->
+			<div class="sign_grid">
+				<!-- Card 1 -->
+				<div class="sign_card" data-cat="school">
+					<div class="sign_visual_icon">&#128214;</div>
+					<div class="sign_word">كِتَاب</div>
+					<div class="sign_desc">فتح الكفين معاً كدفتي كتاب مع ابتسامة خفيفة.</div>
+					<button type="button" class="sign_action_btn" onclick="showSignDetail('كِتَاب (Book)', '&#128214;', 'وضع الكفين متلاصقين عند الحافة السفلية ثم فتحهما كالكتاب المفتوح.', 'أقرأ كتاب العلوم المفيد في مكتبة المدرسة.');">&#128065; تفاصيل الإشارة</button>
+				</div>
+
+				<!-- Card 2 -->
+				<div class="sign_card" data-cat="school">
+					<div class="sign_visual_icon">&#9999;</div>
+					<div class="sign_word">قَلَم</div>
+					<div class="sign_desc">ضم الإبهام والسبابة مع تحريك اليد كالكتابة على الهواء.</div>
+					<button type="button" class="sign_action_btn" onclick="showSignDetail('قَلَم (Pen)', '&#9999;', 'ضم السبابة والإبهام معاً وتحريك المعصم أفقياً لمحاكاة حركة الخط.', 'أكتب واجبي المدرسي بالقلم الأزرق.');">&#128065; تفاصيل الإشارة</button>
+				</div>
+
+				<!-- Card 3 -->
+				<div class="sign_card" data-cat="school">
+					<div class="sign_visual_icon">&#128104;&#8205;&#127979;</div>
+					<div class="sign_word">مُعَلِّم</div>
+					<div class="sign_desc">لمس الجبهة بأطراف الأصابع ثم تحريك اليد للأمام بحزم وتقدير.</div>
+					<button type="button" class="sign_action_btn" onclick="showSignDetail('مُعَلِّم (Teacher)', '&#128104;&#8205;&#127979;', 'أطراف الأصابع تلمس جانب الجبهة ثم تمتد للأمام دلالة على نقل المعرفة.', 'معلم التربية الخاصة يشرح لنا بلغة الإشارة.');">&#128065; تفاصيل الإشارة</button>
+				</div>
+
+				<!-- Card 4 -->
+				<div class="sign_card" data-cat="family">
+					<div class="sign_visual_icon">&#128104;</div>
+					<div class="sign_word">أَب (والد)</div>
+					<div class="sign_desc">ملامسة الإبهام للذقن أو الخد مع فتح باقي الأصابع.</div>
+					<button type="button" class="sign_action_btn" onclick="showSignDetail('أَب (Father)', '&#128104;', 'وضع إبهام اليد المفتوحة على جانب الذقن دلالة على الأب.', 'أبي يساعدني في مراجعة الدروس التفاعلية.');">&#128065; تفاصيل الإشارة</button>
+				</div>
+
+				<!-- Card 5 -->
+				<div class="sign_card" data-cat="family">
+					<div class="sign_visual_icon">&#128105;</div>
+					<div class="sign_word">أُم (والدة)</div>
+					<div class="sign_desc">ملامسة الإبهام للخد الأيمن بحنان مع حركة دائرية خفيفة.</div>
+					<button type="button" class="sign_action_btn" onclick="showSignDetail('أُم (Mother)', '&#128105;', 'ملامسة الخد بالإبهام مع تعبير وجه دافئ يعكس الأمومة.', 'أمي تشجعني وتتابع تقارير تقدمي الأسبوعية.');">&#128065; تفاصيل الإشارة</button>
+				</div>
+
+				<!-- Card 6 -->
+				<div class="sign_card" data-cat="feelings">
+					<div class="sign_visual_icon">&#128522;</div>
+					<div class="sign_word">سَعِيد / فَرَح</div>
+					<div class="sign_desc">تحريك الكف للأعلى عند الصدر مع ابتسامة عريضة في الوجه.</div>
+					<button type="button" class="sign_action_btn" onclick="showSignDetail('سَعِيد (Happy)', '&#128522;', 'راحة اليد تلمس الصدر وتتحرك لأعلى بخفة مع إشراقة الوجه.', 'أنا سعيد جداً بحصولي على وسام التفوق.');">&#128065; تفاصيل الإشارة</button>
+				</div>
+
+				<!-- Card 7 -->
+				<div class="sign_card" data-cat="feelings">
+					<div class="sign_visual_icon">&#129309;</div>
+					<div class="sign_word">شُكْراً</div>
+					<div class="sign_desc">ملامسة أطراف الأصابع للشفاه ثم مد اليد للأمام باتجاه الشخص.</div>
+					<button type="button" class="sign_action_btn" onclick="showSignDetail('شُكْراً (Thank You)', '&#129309;', 'تلمس أطراف أصابع اليد المسطحة الذقن ثم تتحرك للأمام بلطف.', 'شكراً لمعلمي على دعمه المستمر لي.');">&#128065; تفاصيل الإشارة</button>
+				</div>
+
+				<!-- Card 8 -->
+				<div class="sign_card" data-cat="school">
+					<div class="sign_visual_icon">&#127979;</div>
+					<div class="sign_word">مَدْرَسَة</div>
+					<div class="sign_desc">التصفيق باليدين مرتين أفقياً بانتظام (رمز اجتماع الطلاب للتعلم).</div>
+					<button type="button" class="sign_action_btn" onclick="showSignDetail('مَدْرَسَة (School)', '&#127979;', 'ضرب راحة اليد اليمنى فوق راحة اليد اليسرى مرتين بهدوء.', 'أذهب كل صباح إلى مدرسة الدمج لأتعلم.');">&#128065; تفاصيل الإشارة</button>
+				</div>
+
+				<!-- Card 9 -->
+				<div class="sign_card" data-cat="feelings">
+					<div class="sign_visual_icon">&#129304;</div>
+					<div class="sign_word">أُحِبُّك (I Love You)</div>
+					<div class="sign_desc">رفع الإبهام والسبابة والخنصر مع ثني الوسطى والبنصر (رمز الإشارة العالمي).</div>
+					<button type="button" class="sign_action_btn" onclick="showSignDetail('أُحِبُّك (I Love You)', '&#129304;', 'تمديد الإبهام والسبابة والخنصر في وقت واحد وهي إشارة الحب العالمية.', 'أحب لغة الإشارة لأنها لغة التواصل الجميلة.');">&#128065; تفاصيل الإشارة</button>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<!-- #EndEditable --></div>
+		<!-- End Left Column -->
+		<!-- Begin Right Column (Sidebar in RTL) -->
+		<div id="column_right">
+			<!-- #BeginEditable "sidebar" -->
+			<div class="side_box">
+				<h5>أقسام القاموس الإشاري</h5>
+				<ul>
+					<li>&bull; الحروف الهجائية الإشارية (28 حرفاً)</li>
+					<li>&bull; الأرقام والأعداد الإشارية (1 - 100)</li>
+					<li>&bull; مصطلحات المواد والعلوم</li>
+					<li>&bull; تعبيرات التواصل الاجتماعي</li>
+				</ul>
+			</div>
+
+			<div class="side_box">
+				<h5>قاعدة ذهبية في لغة الإشارة</h5>
+				<p class="text_muted">"تعبيرات الوجه (حركة الحاجبين، الشفاه، والعينين) تُمثل 50% من معنى الإشارة، وتمنح الكلمات روحها ودلالتها الشعورية الدقيقة."</p>
+			</div>
+
+			<div class="side_box">
+				<h5>التنقل السريع</h5>
+				<ul>
+					<li><a href="../default.html">&larr; الدرس التفاعلي النموذجي</a></li>
+					<li><a href="../about_me/default.html">&larr; مكتبة المناهج والدروس</a></li>
+					<li><a href="../resume/default.html">&larr; الألعاب والأنشطة</a></li>
+					<li><a href="../photo_gallery/default.html">&larr; لوحة المتابعة والتقارير</a></li>
+				</ul>
+			</div>
+			<!-- #EndEditable --></div>
+		<!-- End Right Column -->
+		<!-- Begin Footer -->
+		<div id="footer">
+			<div id="copyright">
+				<p>منصة &laquo;إشارة وتعلّم&raquo; &copy; 2026 - التطبيق العملي لدراسة جدوى برنامج تعليم ذوي الإعاقة السمعية</p>
+				<p class="text_muted" style="color: #94A3B8; margin-top: 4px;">إعداد وتطوير فريق العمل الأكاديمي المكون من 13 باحثاً وباحثة | بيئة تعليمية داعمة لمعايير التعليم الدامج (Visual-First)</p>
+			</div>
+			<p><a href="../default.html">الرئيسية والدرس التفاعلي</a> | <a href="../about_me/default.html">الدروس والمناهج</a> | <a href="../resume/default.html">الألعاب والأنشطة</a> |
+			<a href="../photo_gallery/default.html">لوحة المتابعة والتقارير</a> | <a href="default.html">القاموس الإشاري المصور</a> |
+			<a href="../contact/default.html">فريق العمل والتواصل</a></p>
+		</div>
+		<!-- End Footer --></div>
+	<!-- End content_container --></div>
+<!-- End Container -->
+
+</body>
+<!-- #EndTemplate -->
+
+</html>

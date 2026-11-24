@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="rtl" xmlns="http://www.w3.org/1999/xhtml" lang="ar">
+
+<!-- #BeginTemplate "../master.dwt" -->
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<!-- #BeginEditable "doctitle" -->
+<title>الدروس والمناهج المصورة | منصة إشارة وتعلّم</title>
+<!-- #EndEditable -->
+<link href="../styles/style0.css" media="screen" rel="stylesheet" title="CSS" type="text/css" />
+<script type="text/javascript">
+/* Interactive Curriculum Previewer */
+function previewLesson(title, subject, duration, desc, gestures) {
+	var box = document.getElementById('lesson_preview_box');
+	box.style.display = 'block';
+	document.getElementById('prev_title').innerText = title;
+	document.getElementById('prev_subject').innerText = subject;
+	document.getElementById('prev_duration').innerText = duration;
+	document.getElementById('prev_desc').innerText = desc;
+	document.getElementById('prev_gestures').innerText = gestures;
+	// scroll smoothly to preview
+	box.scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+</head>
+
+<body>
+
+<!-- Begin Container -->
+<div id="container">
+	<!-- Begin Masthead -->
+	<div id="masthead">
+		<div id="site_badge">&star; تطبيق عملي مبني على دراسة الجدوى الأكاديمية &star;</div>
+		<h1><a href="../default.html">منصة &laquo;إشارة وتعلّم&raquo; الرقمية التفاعلية</a></h1>
+		<h3>المنظومة التعليمية الذكية لدعم التعلم البصري ولغة الإشارة وتنمية المفردات للطلاب الصم وضعاف السمع</h3>
+	</div>
+	<!-- End Masthead -->
+	<!-- Begin Navigation -->
+	<div id="navigation">
+		<ul>
+			<li><a href="../default.html">الرئيسية والدرس التفاعلي</a></li>
+			<li class="active_link"><a href="default.html">الدروس والمناهج المصورة</a></li>
+			<li><a href="../resume/default.html">الألعاب والأنشطة التفاعلية</a></li>
+			<li><a href="../photo_gallery/default.html">لوحة المتابعة والتقارير</a></li>
+			<li><a href="../links/default.html">القاموس الإشاري المصور</a></li>
+			<li><a href="../contact/default.html">فريق العمل والتواصل</a></li>
+		</ul>
+	</div>
+	<!-- End Navigation -->
+	<!-- Begin content_container -->
+	<div id="content_container">
+		<!-- Begin Left Column (Main Practical Content in RTL) -->
+		<div id="column_left">
+			<!-- #BeginEditable "content" -->
+			<h2>مكتبة الدروس والمناهج الرقمية المصورة</h2>
+
+			<div class="callout">
+				<p><strong>منهجية إعداد الدروس (Visual-First Curricula):</strong> كافة الدروس مصممة خصيصاً لتناسب الخصائص المعرفية للطالب الأصم وضعيف السمع؛ حيث تبدأ بالصورة وتدعمها لغة الإشارة المعتمدة مع نصوص ميسرة وأنشطة بصرية تغني عن الشرح الصوتي المجرد.</p>
+			</div>
+
+			<!-- Dynamic Preview Modal/Box -->
+			<div id="lesson_preview_box" style="display: none; background: #F0FDF4; border: 2px solid #16A34A; border-radius: 8px; padding: 16px; margin-bottom: 20px;">
+				<div style="float: left; cursor: pointer; font-weight: bold; color: #991B1B;" onclick="document.getElementById('lesson_preview_box').style.display='none';">&#10006; إغلاق المعاينة</div>
+				<h3 id="prev_title" style="margin-top: 0; color: #166534;">عنوان الدرس</h3>
+				<div style="margin-bottom: 8px;">
+					<span id="prev_subject" class="badge badge_blue">المادة</span>
+					<span id="prev_duration" class="badge badge_amber">المدة</span>
+				</div>
+				<p id="prev_desc" style="font-size: 13px; color: #1F2937; margin-bottom: 8px;">وصف الدرس...</p>
+				<p style="font-size: 12px; color: #047857; margin-bottom: 12px;"><strong>إشارات الدرس المفتاحية:</strong> <span id="prev_gestures"></span></p>
+				<a href="../default.html" class="btn_submit" style="display: inline-block; text-decoration: none; font-size: 13px;">&#9654; بدء مشاهدة الدرس والتفاعل معه الآن</a>
+			</div>
+
+			<!-- Subject Filter Tabs -->
+			<div style="background: #F1F5F9; border-radius: 6px; padding: 10px; margin-bottom: 20px; text-align: center;">
+				<strong>المسارات التعليمية المتاحة:</strong>
+				<span class="badge badge_green" style="font-size: 12px; padding: 5px 12px; cursor: pointer;">اللغة العربية والمفردات</span>
+				<span class="badge badge_blue" style="font-size: 12px; padding: 5px 12px; cursor: pointer;">العلوم والاستكشاف</span>
+				<span class="badge badge_purple" style="font-size: 12px; padding: 5px 12px; cursor: pointer;">الرياضيات البصرية</span>
+				<span class="badge badge_amber" style="font-size: 12px; padding: 5px 12px; cursor: pointer;">المهارات الحياتية</span>
+			</div>
+
+			<!-- CURRICULUM CARDS GRID -->
+			<h3>المرحلة الابتدائية (الصفوف 1 - 6)</h3>
+			
+			<div class="info_card">
+				<div style="float: left;">
+					<button type="button" class="btn_submit" style="padding: 6px 14px; font-size: 12px;" onclick="previewLesson('الحواس الخمس ووظائفها البصرية', 'مادة العلوم - الصف الرابع', '8 دقائق', 'درس مرئي يوضح الحواس الخمس وكيف يعوض الطالب الأصم حاسة السمع بحاستي البصر واللمس مع أنشطة تصنيف للأشياء.', 'إشارة العين (رؤية)، إشارة الأنف (شم)، إشارة اليد (لمس)، إشارة اللسان (تذوق).');">&#128065; معاينة سريعة</button>
+				</div>
+				<span class="badge badge_blue">العلوم</span>
+				<span class="badge badge_green">الصف الرابع الابتدائي</span>
+				<h4 style="margin: 6px 0 4px 0; color: #1E3A8A;">1. الحواس الخمس ووظائفها البصرية</h4>
+				<p style="margin: 0; font-size: 13px; color: #475569;">التعرف على الحواس الخمس بالرسوم ثلاثية الأبعاد ولغة الإشارة وكيفية العناية بها.</p>
+			</div>
+
+			<div class="info_card">
+				<div style="float: left;">
+					<button type="button" class="btn_submit" style="padding: 6px 14px; font-size: 12px;" onclick="previewLesson('تركيب الكلمات من الحروف الهجائية المصورة', 'اللغة العربية - الصف الثالث', '10 دقائق', 'تعلم قراءة وكتابة الكلمات من خلال ربط الحرف الهجائي بإشارة الأصابع مع صور كرتونية معبرة.', 'إشارة حرف الألف (إبهام لأعلى)، إشارة حرف الباء (كف مفتوح مع نقطة سفلية)، إشارة قلم.');">&#128065; معاينة سريعة</button>
+				</div>
+				<span class="badge badge_green">اللغة العربية</span>
+				<span class="badge badge_green">الصف الثالث الابتدائي</span>
+				<h4 style="margin: 6px 0 4px 0; color: #1E3A8A;">2. تركيب الكلمات من الحروف الهجائية المصورة</h4>
+				<p style="margin: 0; font-size: 13px; color: #475569;">تنمية الحصيلة اللغوية عبر ربط حروف الهجاء الإشارية بالصور والكلمات المكتوبة.</p>
+			</div>
+
+			<div class="info_card">
+				<div style="float: left;">
+					<button type="button" class="btn_submit" style="padding: 6px 14px; font-size: 12px;" onclick="previewLesson('الجمع والطرح باستخدام النماذج البصرية الملونة', 'الرياضيات - الصف الثالث', '9 دقائق', 'تمثيل العمليات الحسابية بمجموعات من الكرات والأشكال الهندسية مع التعبير عن الأعداد بإشارات الأصابع.', 'إشارات الأرقام 1-20، حركة الجمع (ضم اليدين)، حركة الطرح (إبعاد كف).');">&#128065; معاينة سريعة</button>
+				</div>
+				<span class="badge badge_purple">الرياضيات</span>
+				<span class="badge badge_green">الصف الثالث الابتدائي</span>
+				<h4 style="margin: 6px 0 4px 0; color: #1E3A8A;">3. الجمع والطرح بالنماذج البصرية الملونة</h4>
+				<p style="margin: 0; font-size: 13px; color: #475569;">شرح العمليات الحسابية الأساسية بمكعبات بصرية متحركة ولغة الإشارة للأرقام.</p>
+			</div>
+
+			<div class="info_card">
+				<div style="float: left;">
+					<button type="button" class="btn_submit" style="padding: 6px 14px; font-size: 12px;" onclick="previewLesson('قواعد السلامة والمرور وإشارات الطريق', 'المهارات الحياتية - الصف الخامس', '7 دقائق', 'التعرف على الإشارات الضوئية والرموز الإرشادية في الشارع لضمان سلامة الطالب الأصم أثناء التنقل.', 'إشارة توقف (كف مشدود)، إشارة انتبه (رفع السبابة بجانب العين)، إشارة ممر المشاة.');">&#128065; معاينة سريعة</button>
+				</div>
+				<span class="badge badge_amber">مهارات حياتية</span>
+				<span class="badge badge_green">الصف الخامس الابتدائي</span>
+				<h4 style="margin: 6px 0 4px 0; color: #1E3A8A;">4. قواعد السلامة المرورية والرموز البصرية</h4>
+				<p style="margin: 0; font-size: 13px; color: #475569;">توعية الطالب بكيفية قراءة البيئة المحيطة والرموز البصرية في الشارع والمدرسة.</p>
+			</div>
+
+			<h3>المرحلة الإعدادية (الصفوف 1 - 3)</h3>
+
+			<div class="info_card">
+				<div style="float: left;">
+					<button type="button" class="btn_submit" style="padding: 6px 14px; font-size: 12px;" onclick="previewLesson('الجهاز الدوري والقلب في الإنسان', 'العلوم - الصف الثاني الإعدادي', '12 دقيقة', 'مجسم ثلاثي الأبعاد يبين مسار الدم بين القلب والرئتين مع ترجمة دقيقة لكافة المصطلحات العلمية المعقدة.', 'إشارة القلب (نبض بالأصابع على الصدر)، إشارة الشريان، إشارة الأكسجين.');">&#128065; معاينة سريعة</button>
+				</div>
+				<span class="badge badge_blue">العلوم</span>
+				<span class="badge badge_amber">الصف الثاني الإعدادي</span>
+				<h4 style="margin: 6px 0 4px 0; color: #1E3A8A;">5. تشريح الجهاز الدوري وعضلة القلب</h4>
+				<p style="margin: 0; font-size: 13px; color: #475569;">استكشاف الدورة الدموية الكبرى والصغرى عبر نماذج تشريحية ثلاثية الأبعاد وشرح إشاري دقيق.</p>
+			</div>
+
+			<div class="info_card">
+				<div style="float: left;">
+					<button type="button" class="btn_submit" style="padding: 6px 14px; font-size: 12px;" onclick="previewLesson('النسب المئوية والرسوم البيانية الإحصائية', 'الرياضيات - الصف الأول الإعدادي', '11 دقيقة', 'شرح كيفية تحويل البيانات إلى أعمدة بيانية ومخططات دائرية ملونة مع تمارين تفاعلية لرسم المخططات.', 'إشارة النسبة المئوية %، إشارة الرسم البياني العمودي، إشارة التساوي.');">&#128065; معاينة سريعة</button>
+				</div>
+				<span class="badge badge_purple">الرياضيات</span>
+				<span class="badge badge_amber">الصف الأول الإعدادي</span>
+				<h4 style="margin: 6px 0 4px 0; color: #1E3A8A;">6. الرسوم البيانية والتمثيل الإحصائي</h4>
+				<p style="margin: 0; font-size: 13px; color: #475569;">تفسير البيانات والجداول الإحصائية من خلال المخططات اللونية والأنشطة التطبيقية.</p>
+			</div>
+			<!-- #EndEditable --></div>
+		<!-- End Left Column -->
+		<!-- Begin Right Column (Sidebar in RTL) -->
+		<div id="column_right">
+			<!-- #BeginEditable "sidebar" -->
+			<div class="side_box">
+				<h5>تصفية الدروس حسب المرحلة</h5>
+				<ul>
+					<li><a href="default.html">&#127891; الصف الأول والثاني الابتدائي (4 دروس)</a></li>
+					<li><a href="default.html">&#127891; الصف الثالث والرابع الابتدائي (8 دروس)</a></li>
+					<li><a href="default.html">&#127891; الصف الخامس والسادس الابتدائي (6 دروس)</a></li>
+					<li><a href="default.html">&#127891; المرحلة الإعدادية الأولى والثانية (10 دروس)</a></li>
+				</ul>
+			</div>
+
+			<div class="side_box">
+				<h5>إحصائيات المكتبة</h5>
+				<ul>
+					<li><strong>إجمالي الدروس المصورة:</strong> 28 درساً</li>
+					<li><strong>فيديوهات لغة الإشارة:</strong> 42 مقطعاً</li>
+					<li><strong>الأنشطة التفاعلية:</strong> 65 نشاطاً</li>
+					<li><strong>المفردات المشروحة:</strong> 350 مفردة</li>
+				</ul>
+			</div>
+
+			<div class="side_box">
+				<h5>دليل المعلم</h5>
+				<p class="text_muted">يمكن للمعلم تحميل خطط الدروس والبطاقات البصرية بصيغة PDF وتوزيعها في حصص الدمج الصفي.</p>
+			</div>
+			<!-- #EndEditable --></div>
+		<!-- End Right Column -->
+		<!-- Begin Footer -->
+		<div id="footer">
+			<div id="copyright">
+				<p>منصة &laquo;إشارة وتعلّم&raquo; &copy; 2026 - التطبيق العملي لدراسة جدوى برنامج تعليم ذوي الإعاقة السمعية</p>
+				<p class="text_muted" style="color: #94A3B8; margin-top: 4px;">إعداد وتطوير فريق العمل الأكاديمي المكون من 13 باحثاً وباحثة | بيئة تعليمية داعمة لمعايير التعليم الدامج (Visual-First)</p>
+			</div>
+			<p><a href="../default.html">الرئيسية والدرس التفاعلي</a> | <a href="default.html">الدروس والمناهج</a> | <a href="../resume/default.html">الألعاب والأنشطة</a> |
+			<a href="../photo_gallery/default.html">لوحة المتابعة والتقارير</a> | <a href="../links/default.html">القاموس الإشاري المصور</a> |
+			<a href="../contact/default.html">فريق العمل والتواصل</a></p>
+		</div>
+		<!-- End Footer --></div>
+	<!-- End content_container --></div>
+<!-- End Container -->
+
+</body>
+<!-- #EndTemplate -->
+
+</html>

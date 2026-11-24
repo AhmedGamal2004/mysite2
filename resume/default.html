@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="rtl" xmlns="http://www.w3.org/1999/xhtml" lang="ar">
+
+<!-- #BeginTemplate "../master.dwt" -->
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<!-- #BeginEditable "doctitle" -->
+<title>الألعاب والأنشطة التفاعلية | منصة إشارة وتعلّم</title>
+<!-- #EndEditable -->
+<link href="../styles/style0.css" media="screen" rel="stylesheet" title="CSS" type="text/css" />
+<script type="text/javascript">
+/* Interactive Sign Matching Game Scripts */
+var score = 100;
+var selectedSign = null;
+
+function selectSignCard(elem, signKey) {
+	// reset previous sign selections
+	var cards = document.getElementsByClassName('match_card_sign');
+	for(var i=0; i<cards.length; i++) {
+		cards[i].style.borderColor = '#CBD5E1';
+		cards[i].style.backgroundColor = '#FFFFFF';
+	}
+	elem.style.borderColor = '#0284C7';
+	elem.style.backgroundColor = '#E0F2FE';
+	selectedSign = signKey;
+	document.getElementById('game_msg').innerText = 'تم اختيار الإشارة: اضغط الآن على الكلمة المصورة المطابقة لها بالأسفل!';
+	document.getElementById('game_msg').style.color = '#0284C7';
+}
+
+function matchWithWord(elem, wordKey) {
+	var msg = document.getElementById('game_msg');
+	if(!selectedSign) {
+		msg.innerText = '&#9888; من فضلك اختر إشارة اليد أولاً من الصف العلوي!';
+		msg.style.color = '#DC2626';
+		return;
+	}
+	if(selectedSign === wordKey) {
+		score += 30;
+		document.getElementById('live_game_score').innerText = score + ' نقطة';
+		elem.style.borderColor = '#16A34A';
+		elem.style.backgroundColor = '#DCFCE7';
+		elem.innerHTML += ' <span style="color:#16A34A; font-weight:bold;">&#10004; مطابق!</span>';
+		elem.onclick = null;
+		msg.innerHTML = '&#10004; رائع جداً! تطابق مثالي بين إشارة اليد والكلمة المصورة (+30 نقطة) &#127881;';
+		msg.style.color = '#166534';
+		selectedSign = null;
+	} else {
+		msg.innerText = '&#10006; غير مطابق! حاول مرة أخرى وتأمل حركة الأصابع وشكل الكائن.';
+		msg.style.color = '#DC2626';
+	}
+}
+
+function solveSequence(stepNumber) {
+	var fb = document.getElementById('seq_feedback');
+	if(stepNumber === 1) {
+		fb.className = 'feedback_box feedback_success';
+		fb.style.display = 'block';
+		fb.innerHTML = '&#10004; ترتيب بصري سليم 100%! البذرة في التربة &larr; السقاية بالماء &larr; نمو الزهرة الجميلة (+25 نقطة).';
+		score += 25;
+		document.getElementById('live_game_score').innerText = score + ' نقطة';
+	} else {
+		fb.className = 'feedback_box feedback_retry';
+		fb.style.display = 'block';
+		fb.innerHTML = '&#9888; فكر في الترتيب المنطقي للنمو: ماذا نضع في التربة أولاً؟';
+	}
+}
+</script>
+</head>
+
+<body>
+
+<!-- Begin Container -->
+<div id="container">
+	<!-- Begin Masthead -->
+	<div id="masthead">
+		<div id="site_badge">&star; تطبيق عملي مبني على دراسة الجدوى الأكاديمية &star;</div>
+		<h1><a href="../default.html">منصة &laquo;إشارة وتعلّم&raquo; الرقمية التفاعلية</a></h1>
+		<h3>المنظومة التعليمية الذكية لدعم التعلم البصري ولغة الإشارة وتنمية المفردات للطلاب الصم وضعاف السمع</h3>
+	</div>
+	<!-- End Masthead -->
+	<!-- Begin Navigation -->
+	<div id="navigation">
+		<ul>
+			<li><a href="../default.html">الرئيسية والدرس التفاعلي</a></li>
+			<li><a href="../about_me/default.html">الدروس والمناهج المصورة</a></li>
+			<li class="active_link"><a href="default.html">الألعاب والأنشطة التفاعلية</a></li>
+			<li><a href="../photo_gallery/default.html">لوحة المتابعة والتقارير</a></li>
+			<li><a href="../links/default.html">القاموس الإشاري المصور</a></li>
+			<li><a href="../contact/default.html">فريق العمل والتواصل</a></li>
+		</ul>
+	</div>
+	<!-- End Navigation -->
+	<!-- Begin content_container -->
+	<div id="content_container">
+		<!-- Begin Left Column (Main Practical Content in RTL) -->
+		<div id="column_left">
+			<!-- #BeginEditable "content" -->
+			<h2>صالة الألعاب البصرية والأنشطة التفاعلية</h2>
+
+			<div class="callout">
+				<p><strong>التعلم باللعب والتغذية البصرية الراجعة (Gamified Learning):</strong> تعتمد هذه الألعاب على تحويل المفردات والمفاهيم الأكاديمية إلى تحديات بصرية ممتعة خالية تماماً من المؤثرات الصوتية المعيقة، وتوفر تغذية راجعة بصرية خضراء فورية تزيد من دافعية الطالب وثقته بنفسه.</p>
+			</div>
+
+			<!-- Live Game Score Bar -->
+			<div style="background: #FEF3C7; border: 2px solid #F59E0B; border-radius: 8px; padding: 12px 18px; margin-bottom: 20px; overflow: hidden;">
+				<div style="float: right;">
+					<strong style="color: #92400E; font-size: 15px;">رصيد النقاط التفاعلي للنشاط:</strong>
+					<span id="live_game_score" style="font-size: 18px; font-weight: bold; color: #B45309; margin-right: 8px;">100 نقطة</span>
+				</div>
+				<div style="float: left;">
+					<span class="badge badge_green">&#127942; المستوى: مبتدئ نشط</span>
+					<span class="badge badge_blue">&#9889; التفاعل البصري: فوري</span>
+				</div>
+			</div>
+
+			<!-- GAME 1: SIGN & OBJECT MATCHING -->
+			<h3>اللعبة الأولى: مطابقة إشارة اليد بالصورة والكلمة (Sign-Object Match)</h3>
+			<p>طريقة اللعب: اضغط أولاً على إشارة اليد في الصف الأول، ثم اضغط على الكلمة المصورة التي تطابقها في الصف الثاني:</p>
+
+			<div id="game_msg" style="padding: 10px; background: #F8FAFC; border: 1px dashed #CBD5E1; border-radius: 6px; text-align: center; font-weight: bold; color: #475569; margin-bottom: 12px;">
+				اختر بطاقة إشارة أولاً للبدء...
+			</div>
+
+			<!-- Row 1: Signs -->
+			<div style="margin-bottom: 14px; overflow: hidden;">
+				<div class="match_card_sign" style="float: right; width: 23%; margin-left: 2%; background: #FFF; border: 2px solid #CBD5E1; border-radius: 6px; padding: 10px 4px; text-align: center; cursor: pointer;" onclick="selectSignCard(this, 'book');">
+					<div style="font-size: 26px;">&#128080;</div>
+					<div style="font-size: 12px; font-weight: bold; color: #1E3A8A; margin-top: 4px;">كفان مفتوحان كالصفحات</div>
+					<span class="badge badge_blue" style="font-size: 10px;">إشارة (1)</span>
+				</div>
+
+				<div class="match_card_sign" style="float: right; width: 23%; margin-left: 2%; background: #FFF; border: 2px solid #CBD5E1; border-radius: 6px; padding: 10px 4px; text-align: center; cursor: pointer;" onclick="selectSignCard(this, 'tree');">
+					<div style="font-size: 26px;">&#129306;</div>
+					<div style="font-size: 12px; font-weight: bold; color: #1E3A8A; margin-top: 4px;">ذراع قائمة مع تحريك الأصابع</div>
+					<span class="badge badge_blue" style="font-size: 10px;">إشارة (2)</span>
+				</div>
+
+				<div class="match_card_sign" style="float: right; width: 23%; margin-left: 2%; background: #FFF; border: 2px solid #CBD5E1; border-radius: 6px; padding: 10px 4px; text-align: center; cursor: pointer;" onclick="selectSignCard(this, 'house');">
+					<div style="font-size: 26px;">&#128079;</div>
+					<div style="font-size: 12px; font-weight: bold; color: #1E3A8A; margin-top: 4px;">تلاقي أطراف الأصابع كسقف</div>
+					<span class="badge badge_blue" style="font-size: 10px;">إشارة (3)</span>
+				</div>
+
+				<div class="match_card_sign" style="float: right; width: 23%; background: #FFF; border: 2px solid #CBD5E1; border-radius: 6px; padding: 10px 4px; text-align: center; cursor: pointer;" onclick="selectSignCard(this, 'apple');">
+					<div style="font-size: 26px;">&#9994;</div>
+					<div style="font-size: 12px; font-weight: bold; color: #1E3A8A; margin-top: 4px;">قبضة يد مستديرة عند الخد</div>
+					<span class="badge badge_blue" style="font-size: 10px;">إشارة (4)</span>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+
+			<!-- Row 2: Words / Objects -->
+			<div style="margin-bottom: 24px; overflow: hidden;">
+				<div style="float: right; width: 23%; margin-left: 2%; background: #F8FAFC; border: 2px solid #CBD5E1; border-radius: 6px; padding: 10px 4px; text-align: center; cursor: pointer;" onclick="matchWithWord(this, 'tree');">
+					<div style="font-size: 26px;">&#127795;</div>
+					<div style="font-size: 13px; font-weight: bold; color: #1E293B;">شجرة (Tree)</div>
+				</div>
+
+				<div style="float: right; width: 23%; margin-left: 2%; background: #F8FAFC; border: 2px solid #CBD5E1; border-radius: 6px; padding: 10px 4px; text-align: center; cursor: pointer;" onclick="matchWithWord(this, 'book');">
+					<div style="font-size: 26px;">&#128214;</div>
+					<div style="font-size: 13px; font-weight: bold; color: #1E293B;">كتاب (Book)</div>
+				</div>
+
+				<div style="float: right; width: 23%; margin-left: 2%; background: #F8FAFC; border: 2px solid #CBD5E1; border-radius: 6px; padding: 10px 4px; text-align: center; cursor: pointer;" onclick="matchWithWord(this, 'apple');">
+					<div style="font-size: 26px;">&#127822;</div>
+					<div style="font-size: 13px; font-weight: bold; color: #1E293B;">تفاحة (Apple)</div>
+				</div>
+
+				<div style="float: right; width: 23%; background: #F8FAFC; border: 2px solid #CBD5E1; border-radius: 6px; padding: 10px 4px; text-align: center; cursor: pointer;" onclick="matchWithWord(this, 'house');">
+					<div style="font-size: 26px;">&#127968;</div>
+					<div style="font-size: 13px; font-weight: bold; color: #1E293B;">منزل (House)</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+
+			<!-- GAME 2: SEQUENCING ACTIVITY -->
+			<h3>اللعبة الثانية: الترتيب المنطقي للقصة المصورة (Visual Sequence)</h3>
+			<p>رتب خطوات نمو النبتة بالضغط على التسلسل الصحيح لمراحل النمو:</p>
+
+			<div class="info_card">
+				<div style="overflow: hidden; margin-bottom: 12px;">
+					<div style="float: right; width: 31%; margin-left: 2%; background: #F0FDF4; border: 1px solid #BBF7D0; border-radius: 6px; padding: 10px; text-align: center;">
+						<div style="font-size: 24px;">&#127793;</div>
+						<strong>المرحلة أ: سقي البذرة بالماء</strong>
+					</div>
+					<div style="float: right; width: 31%; margin-left: 2%; background: #F0FDF4; border: 1px solid #BBF7D0; border-radius: 6px; padding: 10px; text-align: center;">
+						<div style="font-size: 24px;">&#129467;</div>
+						<strong>المرحلة ب: غرس البذرة في التربة</strong>
+					</div>
+					<div style="float: right; width: 31%; background: #F0FDF4; border: 1px solid #BBF7D0; border-radius: 6px; padding: 10px; text-align: center;">
+						<div style="font-size: 24px;">&#127803;</div>
+						<strong>المرحلة ج: تفتح الأزهار الجميلة</strong>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+
+				<p style="margin-top: 10px; font-weight: bold; color: #1E3A8A;">ما هو الترتيب الزمني الصحيح؟</p>
+				<button type="button" class="btn_submit" style="font-size: 12px; margin-left: 8px;" onclick="solveSequence(1);">الخيار 1: (ب &larr; أ &larr; ج)</button>
+				<button type="button" class="btn_submit" style="font-size: 12px; margin-left: 8px; background-color: #475569;" onclick="solveSequence(2);">الخيار 2: (أ &larr; ج &larr; ب)</button>
+				<button type="button" class="btn_submit" style="font-size: 12px; background-color: #475569;" onclick="solveSequence(3);">الخيار 3: (ج &larr; ب &larr; أ)</button>
+
+				<div id="seq_feedback" class="feedback_box"></div>
+			</div>
+			<!-- #EndEditable --></div>
+		<!-- End Left Column -->
+		<!-- Begin Right Column (Sidebar in RTL) -->
+		<div id="column_right">
+			<!-- #BeginEditable "sidebar" -->
+			<div class="side_box">
+				<h5>أهداف صالة الألعاب</h5>
+				<ul>
+					<li>&bull; ربط لغة الإشارة بالكلمة المكتوبة</li>
+					<li>&bull; تعزيز الذاكرة البصرية التخزينية</li>
+					<li>&bull; التدريب على التسلسل والترتيب المنطقي</li>
+					<li>&bull; تغذية راجعة خضراء فورية بدون إحباط</li>
+				</ul>
+			</div>
+
+			<div class="side_box">
+				<h5>لوحة المتصدرين الأسبوعية</h5>
+				<ul>
+					<li>1. عمر أحمد (دمج) - 340 نقطة &#129351;</li>
+					<li>2. مريم سامي (أمل) - 310 نقطة &#129352;</li>
+					<li>3. يوسف كريم (دمج) - 290 نقطة &#129353;</li>
+				</ul>
+			</div>
+
+			<div class="side_box">
+				<h5>التنقل السريع</h5>
+				<ul>
+					<li><a href="../default.html">&larr; الدرس التفاعلي النموذجي</a></li>
+					<li><a href="../about_me/default.html">&larr; فهرس الدروس والمناهج</a></li>
+					<li><a href="../photo_gallery/default.html">&larr; لوحة المتابعة والتقارير</a></li>
+					<li><a href="../links/default.html">&larr; القاموس الإشاري المصور</a></li>
+				</ul>
+			</div>
+			<!-- #EndEditable --></div>
+		<!-- End Right Column -->
+		<!-- Begin Footer -->
+		<div id="footer">
+			<div id="copyright">
+				<p>منصة &laquo;إشارة وتعلّم&raquo; &copy; 2026 - التطبيق العملي لدراسة جدوى برنامج تعليم ذوي الإعاقة السمعية</p>
+				<p class="text_muted" style="color: #94A3B8; margin-top: 4px;">إعداد وتطوير فريق العمل الأكاديمي المكون من 13 باحثاً وباحثة | بيئة تعليمية داعمة لمعايير التعليم الدامج (Visual-First)</p>
+			</div>
+			<p><a href="../default.html">الرئيسية والدرس التفاعلي</a> | <a href="../about_me/default.html">الدروس والمناهج</a> | <a href="default.html">الألعاب والأنشطة</a> |
+			<a href="../photo_gallery/default.html">لوحة المتابعة والتقارير</a> | <a href="../links/default.html">القاموس الإشاري المصور</a> |
+			<a href="../contact/default.html">فريق العمل والتواصل</a></p>
+		</div>
+		<!-- End Footer --></div>
+	<!-- End content_container --></div>
+<!-- End Container -->
+
+</body>
+<!-- #EndTemplate -->
+
+</html>

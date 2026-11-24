@@ -1,0 +1,77 @@
+/* CSS Layout for Practical Deaf Educational Web Platform - Compatible with Expression Web */
+body {
+	margin: 0px;
+	padding: 0px;
+	direction: rtl;
+	text-align: right;
+	background-color: #EEF2F6;
+	font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+	font-size: 14px;
+	color: #1E293B;
+	line-height: 1.6;
+}
+
+#container {
+	margin: 15px auto;
+	width: 980px;
+	background-color: #FFFFFF;
+	border: 1px solid #CBD5E1;
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+#masthead {
+	background-color: #1E3A8A;
+	background-image: linear-gradient(135deg, #1E3A8A 0%, #0F766E 60%, #0284C7 100%);
+	color: #FFFFFF;
+	padding: 24px 30px;
+	margin: 0px;
+	border-bottom: 4px solid #0D9488;
+}
+
+#navigation {
+	margin: 0px;
+	padding: 0px;
+	background-color: #0F172A;
+	border-bottom: 3px solid #0D9488;
+	overflow: hidden;
+}
+
+#content_container {
+	margin: 0px;
+	padding: 0px;
+	background-color: #FFFFFF;
+	overflow: hidden;
+	width: 980px;
+}
+
+/* In RTL: column_left holds the main content (floats right) */
+#column_left {
+	float: right;
+	width: 680px;
+	padding: 25px 25px 35px 20px;
+	box-sizing: border-box;
+}
+
+/* In RTL: column_right holds the sidebar (floats left) */
+#column_right {
+	float: left;
+	width: 270px;
+	padding: 25px 15px 35px 15px;
+	background-color: #F8FAFC;
+	border-right: 1px solid #E2E8F0;
+	box-sizing: border-box;
+	min-height: 700px;
+}
+
+#footer {
+	clear: both;
+	margin: 0px;
+	padding: 24px 25px;
+	background-color: #0F172A;
+	color: #94A3B8;
+	font-size: 12px;
+	border-top: 3px solid #0D9488;
+	overflow: hidden;
+}

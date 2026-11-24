@@ -1,0 +1,807 @@
+@import url(layout.css);
+
+/* =========================================================
+   Typography & Base Styles (Fully compatible with Expression Web)
+   ========================================================= */
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+	margin-top: 0px;
+	font-weight: bold;
+}
+
+h1 {
+	font-size: 24px;
+	color: #FFFFFF;
+	margin-bottom: 6px;
+	line-height: 1.3;
+}
+
+h2 {
+	font-size: 20px;
+	color: #1E3A8A;
+	border-bottom: 2px solid #E2E8F0;
+	padding-bottom: 8px;
+	margin-bottom: 16px;
+	margin-top: 10px;
+}
+
+h3 {
+	font-size: 17px;
+	color: #0D9488;
+	margin-bottom: 10px;
+	margin-top: 18px;
+}
+
+h4 {
+	font-size: 15px;
+	color: #1E293B;
+	margin-bottom: 8px;
+}
+
+p {
+	margin-top: 0px;
+	margin-bottom: 14px;
+	line-height: 1.7;
+	color: #334155;
+}
+
+a {
+	color: #0284C7;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #0369A1;
+	text-decoration: underline;
+}
+
+/* =========================================================
+   Masthead & Header Styling
+   ========================================================= */
+
+#site_badge {
+	display: inline-block;
+	background-color: rgba(255, 255, 255, 0.2);
+	color: #FEF08A;
+	padding: 4px 14px;
+	border-radius: 20px;
+	font-size: 11px;
+	font-weight: bold;
+	margin-bottom: 8px;
+	border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+#masthead h1 {
+	margin: 0px;
+	padding: 0px;
+}
+
+#masthead h1 a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+#masthead h1 a:hover {
+	text-decoration: none;
+	color: #BAE6FD;
+}
+
+#masthead h3 {
+	color: #E2E8F0;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 6px 0px 0px 0px;
+	line-height: 1.4;
+}
+
+/* =========================================================
+   Navigation Menu
+   ========================================================= */
+
+#navigation ul {
+	list-style-type: none;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+
+#navigation li {
+	float: right;
+	margin: 0px;
+	padding: 0px;
+}
+
+#navigation a {
+	display: block;
+	padding: 12px 14px;
+	color: #F1F5F9;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 13px;
+	border-left: 1px solid #1E293B;
+	transition: background-color 0.2s;
+}
+
+#navigation a:hover {
+	background-color: #0D9488;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+#navigation .active_link a {
+	background-color: #0284C7;
+	color: #FFFFFF;
+	border-bottom: 3px solid #FEF08A;
+}
+
+/* =========================================================
+   Sidebar Styling (#column_right)
+   ========================================================= */
+
+#column_right h4 {
+	color: #1E3A8A;
+	border-bottom: 2px solid #0D9488;
+	padding-bottom: 6px;
+	margin-top: 0px;
+	margin-bottom: 12px;
+	font-size: 15px;
+}
+
+#column_right .side_box {
+	background-color: #FFFFFF;
+	border: 1px solid #E2E8F0;
+	border-radius: 6px;
+	padding: 14px;
+	margin-bottom: 18px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+#column_right .side_box h5 {
+	color: #0F172A;
+	font-size: 13px;
+	margin: 0 0 8px 0;
+	font-weight: bold;
+}
+
+#column_right ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+#column_right li {
+	padding: 7px 0;
+	border-bottom: 1px dashed #E2E8F0;
+	font-size: 12px;
+}
+
+#column_right li:last-child {
+	border-bottom: none;
+}
+
+#column_right a {
+	color: #0369A1;
+	font-weight: 500;
+}
+
+/* =========================================================
+   Simulated Video Player & Sign Interpreter Frame
+   ========================================================= */
+
+.video_simulator {
+	background-color: #0F172A;
+	border-radius: 8px;
+	overflow: hidden;
+	color: #FFFFFF;
+	margin: 16px 0 24px 0;
+	border: 2px solid #1E293B;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.video_screen {
+	background-color: #1E293B;
+	min-height: 260px;
+	padding: 20px;
+	position: relative;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.video_main_content {
+	float: right;
+	width: 58%;
+	background: rgba(15, 23, 42, 0.7);
+	padding: 15px;
+	border-radius: 8px;
+	border-right: 4px solid #0D9488;
+}
+
+.video_main_content h4 {
+	color: #38BDF8;
+	margin: 0 0 8px 0;
+	font-size: 16px;
+}
+
+.video_main_content p {
+	color: #E2E8F0;
+	font-size: 13px;
+	line-height: 1.6;
+	margin: 0;
+}
+
+.video_interpreter_box {
+	float: left;
+	width: 36%;
+	background: #0284C7;
+	background: linear-gradient(180deg, #0284C7 0%, #0369A1 100%);
+	border-radius: 8px;
+	padding: 12px;
+	text-align: center;
+	border: 2px solid #38BDF8;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.interpreter_badge {
+	display: inline-block;
+	background: #F59E0B;
+	color: #000;
+	font-size: 11px;
+	font-weight: bold;
+	padding: 2px 8px;
+	border-radius: 10px;
+	margin-bottom: 8px;
+}
+
+.interpreter_avatar {
+	background: #FFFFFF;
+	color: #0F172A;
+	padding: 14px 10px;
+	border-radius: 6px;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 1.4;
+	margin-bottom: 8px;
+	border: 1px solid #BAE6FD;
+}
+
+.video_subtitles {
+	clear: both;
+	background: rgba(0, 0, 0, 0.85);
+	color: #FEF08A;
+	text-align: center;
+	padding: 10px 14px;
+	font-size: 14px;
+	font-weight: bold;
+	border-top: 1px solid #334155;
+}
+
+.video_controls {
+	background-color: #0F172A;
+	padding: 10px 16px;
+	overflow: hidden;
+	border-top: 1px solid #1E293B;
+}
+
+.video_btn {
+	background-color: #0D9488;
+	color: #FFFFFF;
+	border: none;
+	padding: 6px 14px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 12px;
+	font-weight: bold;
+	margin-left: 6px;
+	font-family: inherit;
+}
+
+.video_btn:hover {
+	background-color: #0F766E;
+}
+
+.video_btn_secondary {
+	background-color: #334155;
+	color: #E2E8F0;
+}
+
+.video_btn_secondary:hover {
+	background-color: #475569;
+}
+
+/* =========================================================
+   Interactive Activity / Exercise Cards (Visual Learning)
+   ========================================================= */
+
+.quiz_container {
+	background: #FFFFFF;
+	border: 2px solid #CBD5E1;
+	border-radius: 8px;
+	padding: 18px;
+	margin: 20px 0;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.quiz_question {
+	font-size: 16px;
+	font-weight: bold;
+	color: #1E3A8A;
+	margin-bottom: 14px;
+}
+
+.quiz_options_grid {
+	overflow: hidden;
+	margin: 12px 0;
+}
+
+.quiz_opt_card {
+	float: right;
+	width: 48%;
+	margin-left: 2%;
+	margin-bottom: 12px;
+	background: #F8FAFC;
+	border: 2px solid #CBD5E1;
+	border-radius: 6px;
+	padding: 12px;
+	text-align: center;
+	cursor: pointer;
+	box-sizing: border-box;
+	transition: all 0.2s;
+}
+
+.quiz_opt_card:nth-child(even) {
+	margin-left: 0;
+}
+
+.quiz_opt_card:hover {
+	border-color: #0284C7;
+	background: #F0F9FF;
+}
+
+.quiz_opt_img {
+	background: #E2E8F0;
+	border-radius: 4px;
+	padding: 10px;
+	font-size: 26px;
+	display: block;
+	margin-bottom: 8px;
+}
+
+.quiz_opt_title {
+	font-weight: bold;
+	color: #1E293B;
+	font-size: 14px;
+}
+
+.quiz_opt_sign {
+	color: #0D9488;
+	font-size: 12px;
+	margin-top: 4px;
+}
+
+.feedback_box {
+	display: none;
+	padding: 12px 16px;
+	border-radius: 6px;
+	font-weight: bold;
+	margin-top: 14px;
+	font-size: 14px;
+	text-align: center;
+}
+
+.feedback_success {
+	background: #DCFCE7;
+	color: #166534;
+	border: 2px solid #86EFAC;
+}
+
+.feedback_retry {
+	background: #FEE2E2;
+	color: #991B1B;
+	border: 2px solid #FCA5A5;
+}
+
+/* =========================================================
+   Interactive Sign Language Dictionary Cards
+   ========================================================= */
+
+.sign_grid {
+	overflow: hidden;
+	margin: 16px 0;
+}
+
+.sign_card {
+	float: right;
+	width: 31.33%;
+	margin-left: 2%;
+	margin-bottom: 16px;
+	background: #FFFFFF;
+	border: 1px solid #CBD5E1;
+	border-top: 3px solid #0D9488;
+	border-radius: 6px;
+	padding: 12px;
+	text-align: center;
+	box-sizing: border-box;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+}
+
+.sign_card:nth-child(3n) {
+	margin-left: 0;
+}
+
+.sign_visual_icon {
+	background: #F0FDFA;
+	border: 1px dashed #0D9488;
+	border-radius: 6px;
+	padding: 14px 6px;
+	font-size: 28px;
+	margin-bottom: 8px;
+	color: #0F766E;
+}
+
+.sign_word {
+	font-size: 15px;
+	font-weight: bold;
+	color: #1E3A8A;
+	margin-bottom: 4px;
+}
+
+.sign_desc {
+	font-size: 11px;
+	color: #64748B;
+	line-height: 1.4;
+	margin-bottom: 8px;
+	min-height: 32px;
+}
+
+.sign_action_btn {
+	background: #0284C7;
+	color: #FFF;
+	border: none;
+	padding: 4px 10px;
+	border-radius: 4px;
+	font-size: 11px;
+	cursor: pointer;
+	width: 100%;
+	font-family: inherit;
+}
+
+.sign_action_btn:hover {
+	background: #0369A1;
+}
+
+/* =========================================================
+   Student Dashboard & Progress
+   ========================================================= */
+
+.student_badge_card {
+	background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+	border: 1px solid #BFDBFE;
+	border-radius: 8px;
+	padding: 14px;
+	margin-bottom: 16px;
+	overflow: hidden;
+}
+
+.student_avatar {
+	float: right;
+	width: 45px;
+	height: 45px;
+	background: #2563EB;
+	color: #FFFFFF;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 45px;
+	font-size: 20px;
+	font-weight: bold;
+	margin-left: 12px;
+}
+
+.student_info {
+	float: right;
+	width: 160px;
+}
+
+.student_name {
+	font-weight: bold;
+	font-size: 14px;
+	color: #1E3A8A;
+}
+
+.student_level {
+	font-size: 11px;
+	color: #475569;
+}
+
+.progress_bar_wrapper {
+	background: #E2E8F0;
+	border-radius: 10px;
+	height: 14px;
+	overflow: hidden;
+	margin: 8px 0;
+	border: 1px solid #CBD5E1;
+}
+
+.progress_bar_fill {
+	background: linear-gradient(90deg, #10B981, #059669);
+	height: 100%;
+	border-radius: 10px;
+	text-align: center;
+	color: #FFF;
+	font-size: 10px;
+	line-height: 14px;
+	font-weight: bold;
+}
+
+/* =========================================================
+   Common Components & Utilities
+   ========================================================= */
+
+.callout {
+	background-color: #F0FDF4;
+	border-right: 4px solid #10B981;
+	padding: 14px 18px;
+	margin: 16px 0px;
+	border-radius: 4px;
+	color: #064E3B;
+}
+
+.callout-info {
+	background-color: #F0F9FF;
+	border-right: 4px solid #0284C7;
+	padding: 14px 18px;
+	margin: 16px 0px;
+	border-radius: 4px;
+	color: #0C4A6E;
+}
+
+.info_card {
+	background-color: #FFFFFF;
+	border: 1px solid #E2E8F0;
+	border-radius: 8px;
+	padding: 16px;
+	margin-bottom: 16px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+}
+
+.info_card_highlight {
+	background-color: #F8FAFC;
+	border: 1px solid #CBD5E1;
+	border-top: 3px solid #1E3A8A;
+	border-radius: 6px;
+	padding: 16px;
+	margin-bottom: 16px;
+}
+
+table.data_table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 16px 0px 20px 0px;
+	font-size: 13px;
+	background-color: #FFFFFF;
+}
+
+table.data_table th {
+	background-color: #1E3A8A;
+	color: #FFFFFF;
+	padding: 10px 12px;
+	text-align: right;
+	border: 1px solid #CBD5E1;
+	font-weight: bold;
+}
+
+table.data_table td {
+	padding: 9px 12px;
+	border: 1px solid #E2E8F0;
+	color: #334155;
+	vertical-align: middle;
+}
+
+table.data_table tr:nth-child(even), table.data_table tr.even_row {
+	background-color: #F8FAFC;
+}
+
+.badge {
+	display: inline-block;
+	padding: 3px 8px;
+	font-size: 11px;
+	font-weight: bold;
+	border-radius: 12px;
+	margin-left: 4px;
+}
+
+.badge_green {
+	background-color: #DCFCE7;
+	color: #166534;
+}
+
+.badge_blue {
+	background-color: #DBEAFE;
+	color: #1E40AF;
+}
+
+.badge_amber {
+	background-color: #FEF3C7;
+	color: #92400E;
+}
+
+.badge_purple {
+	background-color: #F3E8FF;
+	color: #6B21A8;
+}
+
+.stat_grid {
+	margin: 16px 0;
+	overflow: hidden;
+}
+
+.stat_box {
+	float: right;
+	width: 48%;
+	margin-left: 2%;
+	margin-bottom: 12px;
+	background: #F8FAFC;
+	border: 1px solid #E2E8F0;
+	border-radius: 8px;
+	padding: 12px 14px;
+	box-sizing: border-box;
+}
+
+.stat_box:nth-child(even) {
+	margin-left: 0;
+}
+
+.stat_number {
+	font-size: 22px;
+	font-weight: bold;
+	color: #0D9488;
+	margin-bottom: 4px;
+}
+
+.stat_label {
+	font-size: 12px;
+	color: #64748B;
+	font-weight: 500;
+}
+
+.step_item {
+	background-color: #FFFFFF;
+	border: 1px solid #E2E8F0;
+	border-right: 4px solid #0284C7;
+	padding: 12px 16px;
+	margin-bottom: 12px;
+	border-radius: 4px;
+}
+
+.step_number {
+	display: inline-block;
+	background-color: #0284C7;
+	color: #FFFFFF;
+	width: 24px;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	border-radius: 50%;
+	font-weight: bold;
+	font-size: 12px;
+	margin-left: 8px;
+}
+
+.team_grid {
+	overflow: hidden;
+	margin: 16px 0;
+}
+
+.team_member {
+	float: right;
+	width: 48%;
+	margin-left: 2%;
+	margin-bottom: 10px;
+	background: #FFFFFF;
+	border: 1px solid #E2E8F0;
+	border-radius: 6px;
+	padding: 10px 14px;
+	box-sizing: border-box;
+	font-size: 13px;
+	font-weight: bold;
+	color: #1E293B;
+}
+
+.team_member:nth-child(even) {
+	margin-left: 0;
+}
+
+.team_idx {
+	display: inline-block;
+	background: #1E3A8A;
+	color: #FFF;
+	width: 22px;
+	height: 22px;
+	line-height: 22px;
+	text-align: center;
+	border-radius: 50%;
+	font-size: 11px;
+	margin-left: 8px;
+}
+
+.form_group {
+	margin-bottom: 14px;
+}
+
+.form_group label {
+	display: block;
+	font-weight: bold;
+	font-size: 13px;
+	margin-bottom: 5px;
+	color: #1E293B;
+}
+
+.form_control {
+	width: 100%;
+	padding: 9px 12px;
+	font-size: 13px;
+	border: 1px solid #CBD5E1;
+	border-radius: 4px;
+	box-sizing: border-box;
+	font-family: inherit;
+}
+
+.form_control:focus {
+	border-color: #0284C7;
+	outline: none;
+}
+
+.btn_submit {
+	background-color: #0D9488;
+	color: #FFFFFF;
+	border: none;
+	padding: 10px 22px;
+	font-size: 14px;
+	font-weight: bold;
+	border-radius: 4px;
+	cursor: pointer;
+	font-family: inherit;
+}
+
+.btn_submit:hover {
+	background-color: #0F766E;
+}
+
+#footer p {
+	margin: 0;
+	font-size: 12px;
+	text-align: center;
+	line-height: 1.8;
+}
+
+#copyright {
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+#footer a {
+	color: #93C5FD;
+	text-decoration: none;
+	margin: 0 4px;
+}
+
+#footer a:hover {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+.clearfix {
+	clear: both;
+}
+
+.text_center {
+	text-align: center;
+}
+
+.text_muted {
+	color: #64748B;
+	font-size: 12px;
+}
